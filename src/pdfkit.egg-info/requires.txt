@@ -1,0 +1,9 @@
+pypdf>=4.0.0
+Pillow>=10.0.0
+reportlab>=4.0.0
+
+[all]
+pdf2image>=1.16.0
+
+[images]
+pdf2image>=1.16.0

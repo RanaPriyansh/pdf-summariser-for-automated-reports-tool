@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-summariser-for-automated-reports-tool"
+version = "1.0.0"
+description = "PDF summariser for automated reports"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "pdf-summariser-for-automated-reports-tool"}
+]
+keywords = ["pdf", "merge", "split", "compress", "watermark", "encrypt", "cli", "developer-tools"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: Office/Business",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "pypdf>=4.0.0",
+    "Pillow>=10.0.0",
+    "reportlab>=4.0.0",
+]
+
+[project.optional-dependencies]
+images = ["pdf2image>=1.16.0"]
+all = ["pdf2image>=1.16.0"]
+
+[project.urls]
+Homepage = "https://github.com/RanaPriyansh/pdfkit"
+Repository = "https://github.com/RanaPriyansh/pdfkit"
+Issues = "https://github.com/RanaPriyansh/pdfkit/issues"
+
+[project.scripts]
+pdfkit = "pdfkit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
